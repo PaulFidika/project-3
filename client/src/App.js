@@ -3,10 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 import Portfolio from './pages/Portfolio'
+import PortfolioDetail from './pages/PortfolioDetail'
 
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+
+import './css/styles.css'
 
 
 function App() {
@@ -24,6 +27,7 @@ function App() {
           <Route exact path="/portfolio">
             <Portfolio />
           </Route>
+          <Route exact path="/portfolio:id" component={PortfolioDetail} />
           <Route path="*">
             <NotFound />
           </Route>
